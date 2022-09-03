@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Error loading {{ title }}
+{% endblock %}
+
+{% block body %}
+    <h1>'{{ title }}' is not an Existing page</h1>
+    <p>If you'd like to create a new page : <a href="{% url 'newpage' %}">Create New Page</a></p>
+{% endblock %}
+

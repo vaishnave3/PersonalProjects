@@ -1,0 +1,10 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <h1>'{{ title }}' already exists, please choose a different title.</h1>
+    <a href="{% url 'index' %}">Back to home</a>
+{% endblock %}
