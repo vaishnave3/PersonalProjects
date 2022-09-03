@@ -1,0 +1,48 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 5px;
+    min-width: 400px;
+}
+
+
+button {
+    background-color: #5f9341;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0px;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    border:none;
+}
+
+input {
+    padding: 5px 10px;
+    width: 100%;
+    border: 1px solid #5f9341;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type:disc;
+    padding: 0;
+}
+
+li {
+    padding-top: 5px;
+    font: size 50px;
+}
+
+a {
+  color: #5f9341;   
+}
+
+#del-btn {
+    background-color: white;
+    border: 2px solid #5f9341;
+    color: #5f9341;
+    width: 150px;
+}
