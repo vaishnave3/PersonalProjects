@@ -1,0 +1,53 @@
+{% extends "auctions/layout.html" %}
+
+<head>
+    <title>
+        New Listing
+    </title>
+</head>
+{% block body %}
+    <form action="{% url 'createlisting' %}" method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="title" class="form-label">Title of your Bid : </label>
+            <br>
+            <input type="text" class="form-control" name="title" id="title" placeholder="Title">
+        </div>
+        <br>
+        <div>
+            <label for="desc" class="form-label">A short description of your Bid : </label>
+            <br>
+            <input type="text" class="form-control" name="description" id="desc" placeholder="Description">
+        </div>
+        <div>
+            <label for="cp" class="form-label"></label>
+            <br>
+            <input type="hidden" class="form-control" name="currentprice" id="cp" placeholder="Current Price in &#x20b9">
+        </div>
+        <div>
+            <label for="startB" class="form-label">Starting price of your bid in rupees: </label>
+            <br>
+            <input type="number" class="form-control" name="startbid" id="startB" placeholder="Starting Price in &#x20b9">
+        </div>
+        <br>
+        <h6>The following Fields are not mandatory : </h6>
+        <div>
+            <label for="imageU" class="form-label">Link to an image of the item :</label>
+            <br>
+            <input type="url" class="form-control" name="imgupload" id="imageU" placeholder="https://example.com">
+        </div>
+        <br>
+        <div>
+            <label for="category" class="form-label">Category of your item : </label>
+            <br>
+            <select id="category" name="category">
+                <option value="Fashion">Fashion</option>
+                <option value="Cars">Cars</option>
+                <option value="Food">Food</option>
+                <option value="Null">Others</option>
+            </select>
+        </div>
+        <br>
+        <input type="submit">
+    </form>
+{% endblock %}

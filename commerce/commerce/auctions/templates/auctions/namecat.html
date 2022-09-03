@@ -1,0 +1,16 @@
+{% extends "auctions/layout.html" %}
+{% load mathfilters %}
+
+{% block body %}
+    <h2>Active Listings</h2>
+    <ol>
+        <div>
+            {% for i in items %}
+            <li>
+                <a href="/listing/{{ i.id }}">{{ i.title }}</a>
+            </li>
+            {% endfor %}
+        </div>
+    </ol>
+    
+{% endblock %}

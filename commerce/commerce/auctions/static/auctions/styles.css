@@ -1,0 +1,49 @@
+body {
+    padding: 15px;
+    background-color: rgb(243, 189, 198);
+}
+
+h5 {
+    color: rgb(69, 66, 66);
+}
+
+.box {
+    width: 10%;
+    padding: 6px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(59, 47, 47);
+    border-radius: 4px;
+  }
+
+  .button {
+    background-color: rgba(175, 88, 102, 0.672); 
+    border: none;
+    color: white;
+    padding: 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+
+  .boxb {
+    width: 50%;
+    padding: 6px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(59, 47, 47);
+    border-radius: 4px;
+  }
+
+  .nav {
+    color: black;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family:serif;
+  }

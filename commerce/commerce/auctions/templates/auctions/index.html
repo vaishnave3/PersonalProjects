@@ -1,0 +1,27 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<h2>Search by category : </h2>
+<ul class="nav">
+    {% for i in listcat %}
+        <li class="nav-link"><a href="{% url 'namecat' i %}">{{i}}</a></li>
+    {% endfor %}
+</ul><hr>
+    <h2>Active Listings</h2>
+    <ul>
+        <div>
+            {% for auction in auctions %}
+            {% if auction.closed %}
+            {% else %}
+            <li>
+                <hr><h4><a href="{% url 'listing' auction.id %}" style="color:rgb(27, 21, 85)">{{ auction.title }}</a></h4>
+                <p>{{ auction.description }} <br> {{ auction.currentprice }} &#x20b9<br><br>
+                <img src="{{ auction.imageupload }}" width="20%" height="10%">
+                {% endif %}
+                {% empty %} <h6>No active listing right now.</h6>
+            </li>
+            {% endfor %}
+        </div>
+    </ul>
+    
+{% endblock %}

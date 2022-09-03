@@ -1,0 +1,15 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<div class="body">
+    <h1>Congrats, your bid was added to the list !! :)</h1>
+    <h4> This is the final details of your bid : </h4>
+    <h6>Title : </h6> <h5>{{ title }}</h5>
+    <h6>Description : </h6><h5>{{ description }}</h5>
+    <h6>Starting price of bid : </h6><h5>{{ startbid }} &#x20b9</h5>
+    <h6>Image link : </h6><a href="{{ imgupload }}" target="_blank" style="color:rgb(59, 25, 25)">Click Here.</a><h5></h5>
+    <h6>Category : </h6><h5>{{ category }} </h5>
+    <h6>Current Price : </h6><h5>{{ currentprice }} &#x20b9</h5><br> <br>
+    <a href="{% url 'index' %}">Return to main page.</a>
+</div>
+{% endblock %}

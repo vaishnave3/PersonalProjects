@@ -1,0 +1,19 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h1>Wishlist : {{ message }}</h1>
+    <ol>
+        <div>
+            {% for i in wl %}
+            <li>
+                <a href="{% url 'listing' i.id %}">{{ i.title }}</a>
+                <form action="wishlistremove/{{ i.id }}" id="form1" method="post">
+                    {% csrf_token %}
+                    <button type="submit" form="form1" class="button">Remove Item</button>
+                </form>
+            </li>
+            {% endfor %}
+        </div>
+    </ol>
+    
+{% endblock %}
